@@ -1,0 +1,3 @@
+4. Why is it not possible to create two branches with the names `fix` and `fix/bug` in a Git repository, and what causes this conflict?
+
+To create branches Git treats branch names as part of the file system within the ".git/refs/heads/" directory, where each branch name corresponds to a file or directory. Thus creation of branch "fix" will give a directory ".git/refs/heads/" and while creating another branch named "fix/bug" Git will treat it as a new directory named fix and a file named bug inside it. But, while creating a new directory it will result in a conflict because it matches exactly with the file named "fix" generated while creating the branch "fix". And vice-versa if we try to create `fix/bug` first and `fix` next.
