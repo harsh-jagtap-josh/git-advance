@@ -1,0 +1,6 @@
+Q5. How to un-stage changes from the staged area. write command for it.
+
+To un-stage the changes from the staging area, simply we can use the git command - `git restore` with a staged flag (--staged) to restore the files or simply move the files from the staging area to the unstaged area.
+
+Git Command:
+git restore --staged <filename>
